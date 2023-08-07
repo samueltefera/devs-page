@@ -1,7 +1,4 @@
-@extends('layout')
-
-@section('content')
-
+<x-layout>
 <div class="mx-4">
     <x-card>
         <div
@@ -50,4 +47,4 @@
     </x-card>
 </div>
 
-@endsection
+</x-layout>
