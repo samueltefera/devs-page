@@ -13,9 +13,12 @@ class ListingController extends Controller
         return view('listings.index', [
             'heading' => 'Latest Lists',
             'listings' => Listing::latest()->filter(request(['search', 'tag']))
-            ->get()
+            ->paginate(1)
         ]);
 
+    }
+    function itrablefun(itrable $itd){
+        return ['f', 'b', 'c'];
     }
 
     public function show(Listing $listing) {
