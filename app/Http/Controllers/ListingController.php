@@ -13,7 +13,7 @@ class ListingController extends Controller
         return view('listings.index', [
             'heading' => 'Latest Lists',
             'listings' => Listing::latest()->filter(request(['search', 'tag']))
-            ->paginate(1)
+            ->paginate(6)
         ]);
 
     }
